@@ -15,7 +15,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class StudentConfiguration extends WebSecurityConfigurerAdapter {
 	
 //	@Override
-//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//	protected void configure(Authentica
+	
+	
+	//tionManagerBuilder auth) throws Exception {
 //		auth.inMemoryAuthentication().withUser("hari").password("$2a$12$Tl4Rwk8abEr9cPKQLIE5u.wvAglxxxjJj4fScp9MerPVkRwfMqomC").roles("Student");
 //	}
 //	
@@ -29,9 +32,14 @@ public class StudentConfiguration extends WebSecurityConfigurerAdapter {
 //		return new BCryptPasswordEncoder(12);
 //	}
 	
+	
+	
+	
+	
+	
 	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser("hari").password("$2a$12$Tl4Rwk8abEr9cPKQLIE5u.wvAglxxxjJj4fScp9MerPVkRwfMqomC").roles("Student").
+	protected void configure(AuthenticationManagerBuilder a) throws Exception {
+		a.inMemoryAuthentication().withUser("hari").password("$2a$12$Tl4Rwk8abEr9cPKQLIE5u.wvAglxxxjJj4fScp9MerPVkRwfMqomC").roles("Student").
 		and().withUser("ajay").password("$2a$12$B3.w0wxMcAXrN6eNnZ4p4.TqtT6x3VLO2piqfN2eHnQi/vIahEKjG").roles("Trainer").
 		and().withUser("nisha").password("$2a$12$emBTv8/l0NM.1NByFZ1aO.octxkhoEDlJjY16WrvrS1ViOq8az7Ny").roles("manager");		
 		
